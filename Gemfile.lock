@@ -283,7 +283,7 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     net-http-pipeline (1.0.1)
-    netaddr (1.5.0)
+    netaddr (2.0.4)
     netrc (0.11.0)
     nio4r (2.3.1)
     nokogiri (1.6.5)
@@ -494,7 +494,7 @@ DEPENDENCIES
   mocha
   mongoid (~> 5.0.0)
   net-http-pipeline
-  netaddr (~> 1.5.0)
+  netaddr (~> 2.0.4)
   nokogiri
   peek
   peek-git

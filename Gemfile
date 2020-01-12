@@ -31,7 +31,7 @@ gem 'peek-rblineprof', :platform => :ruby # doesn't work on Windows
 gem 'peek-performance_bar'
 gem 'peek-git'
 gem 'jwt', '1.5'
-gem 'netaddr', '~> 1.5.0'
+gem 'netaddr', '~> 2.0.4'
 gem 'tzinfo'
 gem 'tzinfo-data'
 gem 'rack-timeout'
