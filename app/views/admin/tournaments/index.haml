@@ -1,0 +1,17 @@
+%section
+    .row
+        .col-md-12
+            .pull-right= link_to "New Tournament", new_admin_tournament_path, :class => "btn btn-default"
+            .table-container
+                %table.table
+                    %thead
+                        %tr
+                            %th Name
+                            %th{:width => "2%"}
+                    %tbody
+                        - @tournaments.each do |tournament|
+                            %tr
+                                %td= tournament.name
+                                %td
+                                    %a{:href => edit_admin_tournament_path(tournament)}
+                                        %i.fa.fa-pencil-alt

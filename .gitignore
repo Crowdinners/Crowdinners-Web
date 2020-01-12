@@ -1,0 +1,16 @@
+*.rbc
+*.rdb
+*.sassc
+*.sass-cache
+*.rspec
+.bundle
+vendor/bundle
+logs
+log
+public
+tmp
+.rakeTasks
+.idea
+LocalGemfile
+LocalGemfile.lock
+google.json

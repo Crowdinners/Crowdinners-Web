@@ -1,0 +1,25 @@
+.carousel.slide#hero{:style => "position: absolute;"}
+    .carousel-inner{:style => "z-index: -1"}
+        .item{:class => "active"}
+            %img#breathing{:src => image_path(@image)}
+.jumbotron.main.masthead
+    .container
+        %h2.front-title= ORG::NAME
+        %h4.front-title Unofficial Minecraft crowdin forum<br>
+        .row
+            .col-md-6.ip
+                %p.label.label-default Check it out!
+                %br
+                %a.btn.btn-success.btn-lg.ip{:href => "https://crowdin.com/project/minecraft", :target => "_blank"}
+                    %input.input{type: "text", value: "Crowdin Project", readonly: true}
+.bs-docs-social
+    .container
+        %ul.bs-docs-social-buttons
+            %li
+                %h5{:style => "font-weight: bold"} Latest Announcements:
+                - @topics.each do |topic|
+                    %li
+                        %a{:href => forem.topic_path(topic),
+                           :rel => "tooltip",
+                           :title => "Created " + time_ago_in_words(topic.created_at, false, :vague => true) + " ago",
+                           :data => {:placement => "bottom"}}= render_topic_title(topic, emoji_size: 16)

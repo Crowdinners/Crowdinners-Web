@@ -1,0 +1,12 @@
+- content_for :title do "Play" end
+%section.clearfix.play
+    .page-header
+        %h1
+            Servers
+            %small Play anywhere, anytime
+    - if @portal_infos.size > 1
+        = render partial: 'multi_portal'
+    - elsif @portal_infos.size == 1
+        = render partial: 'single_portal'
+    - else
+        %h2.center SMP is not online

@@ -1,0 +1,27 @@
+:css
+    .red a {
+        color: red;
+    }
+%section
+    .row
+        .col-md-12
+            .pull-right= link_to "New Category", new_admin_category_path, :class => "btn btn-default"
+            .table-container
+                %table.table
+                    %thead
+                        %tr
+                            %th{:width => "10%"} Order
+                            %th{:width => "86%"} Category
+                            %th{:width => "2%"}
+                            %th{:width => "2%"}
+                    %tbody
+                        - @category.each do |category|
+                            %tr
+                                %td= category.order
+                                %td= category.name
+                                %td.center
+                                    %a{:href => edit_admin_category_path(category)}
+                                        %i.fa.fa-pencil-alt
+                                %td.center.red
+                                    %a{:href => admin_category_path(category), :data => {:method => :delete, :confirm => "Are you sure?"}}
+                                        %i.fa.fa-times

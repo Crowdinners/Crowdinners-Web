@@ -1,0 +1,34 @@
+:css
+    .red a {
+        color: red;
+    }
+%section
+    .row
+        .col-md-12
+            .pull-right= link_to "New Stream", new_admin_stream_path, :class => "btn btn-default"
+            - pagination = paginate @streams
+            = pagination
+            .table-container
+                %table.table
+                    %thead
+                        %tr
+                            %th{width: "10%"} Priority
+                            %th Channel
+                            %th{width: "10%"} Live
+                            %th{width: "2%"}
+                            %th{width: "2%"}
+                    %tbody
+                        - @streams.each do |stream|
+                            %tr{class: ('error' if stream.public)}
+                                %td= stream.priority
+                                %td= stream.channel
+                                %td
+                                    - if stream.public
+                                        Yes
+                                %td.center
+                                    %a{:href => edit_admin_stream_path(stream)}
+                                        %i.fa.fa-pencil-alt
+                                %td.center.red
+                                    %a{:href => admin_stream_path(stream), :data => {:method => :delete, :confirm => "Are you sure?"}}
+                                        %i.fa.fa-times
+            = pagination

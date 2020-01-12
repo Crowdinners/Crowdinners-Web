@@ -1,0 +1,385 @@
+body {
+    background-color: #333333;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: #bdbdbd;
+}
+
+a {
+    color: #90A4AE;
+}
+
+a:hover,
+a:focus {
+    color: #CFD8DC;
+}
+
+li {
+    color: #bdbdbd !important;
+}
+
+hr {
+    border-color: #616161;
+}
+
+pre {
+    background-color: #212121;
+    color: #bdbdbd;
+    border-color: transparent;
+}
+
+blockquote {
+    border-left: 5px solid #bdbdbd;
+}
+
+.navbar-default {
+    background-color: #212121;
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #bdbdbd !important;
+    background-color: #333333 !important;
+}
+
+.dropdown-menu {
+    background-color: #333333;
+}
+
+.dropdown-menu > li > a {
+    color: #bdbdbd !important;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-color: #212121;
+    color: #bdbdbd;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li:hover > a,
+.navbar-default .navbar-nav .open .dropdown-menu > li:focus > a,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.open > .dropdown-toggle.btn-default {
+    color: #bdbdbd !important;
+    background-color: #212121 !important;
+    border-color: transparent !important;
+}
+
+.btn {
+    color: #212121;
+}
+
+.btn-default {
+    background-color: #212121;
+    color: #bdbdbd;
+    border-color: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    background-color: #333333;
+    color: #bdbdbd;
+    border-color: #212121;
+}
+
+.btn-primary,
+.btn-danger {
+    color: #eeeeee;
+}
+
+.nav-tabs {
+    border-color: #616161;
+}
+
+.nav-tabs > li.active > a {
+    background-color: #212121 !important;
+    color: #bdbdbd !important;
+    border-color: #616161;
+}
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+    background-color: #212121;
+    color: #bdbdbd;
+    border-color: transparent;
+}
+
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus {
+    background-color: #212121;
+    color: #bdbdbd;
+    border-color: transparent;
+}
+
+.forum-sidebar h4,
+.forum-header,
+.page-header {
+    border-color: #616161;
+}
+
+.bs-docs-social {
+    background-color: #212121;
+    border-color: transparent;
+}
+
+.well {
+    background-color: #212121;
+    border-color: transparent;
+}
+
+.connect-header {
+    color: #bdbdbd;
+}
+
+th,
+td {
+    color: #bdbdbd;
+}
+
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info,
+.table > tfoot > tr > td.info,
+.table > thead > tr > th.info,
+.table > tbody > tr > th.info,
+.table > tfoot > tr > th.info,
+.table > thead > tr.info > td,
+.table > tbody > tr.info > td,
+.table > tfoot > tr.info > td,
+.table > thead > tr.info > th,
+.table > tbody > tr.info > th,
+.table > tfoot > tr.info > th,
+.table > thead > tr > td.danger,
+.table > tbody > tr > td.danger,
+.table > tfoot > tr > td.danger,
+.table > thead > tr > th.danger,
+.table > tbody > tr > th.danger,
+.table > tfoot > tr > th.danger,
+.table > thead > tr.danger > td,
+.table > tbody > tr.danger > td,
+.table > tfoot > tr.danger > td,
+.table > thead > tr.danger > th,
+.table > tbody > tr.danger > th,
+.table > tfoot > tr.danger > th,
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning,
+.table > tfoot > tr > td.warning,
+.table > thead > tr > th.warning,
+.table > tbody > tr > th.warning,
+.table > tfoot > tr > th.warning,
+.table > thead > tr.warning > td,
+.table > tbody > tr.warning > td,
+.table > tfoot > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > tbody > tr.warning > th,
+.table > tfoot > tr.warning > th,
+.table > thead > tr > td.success,
+.table > tbody > tr > td.success,
+.table > tfoot > tr > td.success,
+.table > thead > tr > th.success,
+.table > tbody > tr > th.success,
+.table > tfoot > tr > th.success,
+.table > thead > tr.success > td,
+.table > tbody > tr.success > td,
+.table > tfoot > tr.success > td,
+.table > thead > tr.success > th,
+.table > tbody > tr.success > th,
+.table > tfoot > tr.success > th {
+  color: #212121;
+}
+
+tr.info > td > a,
+tr.info > th > a {
+    color: #212121;
+}
+
+tr.danger > td > a,
+tr.danger > th > a {
+    color: #212121;
+}
+
+tr.warning > td > a,
+tr.warning > th > a {
+    color: #212121;
+}
+
+tr.success > td > a,
+tr.success > th > a {
+    color: #212121;
+}
+
+.table-bordered > th,
+.table-bordered > td {
+    border-color: #424242;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #424242;
+}
+
+.listing > .row:nth-of-type(even){
+    background-color:#333333;
+}
+
+.form-control {
+    background-color: #212121;
+    color: #bdbdbd;
+    border-color: transparent;
+}
+
+.form-control:disabled {
+    background-color: #bdbdbd;
+    color: #212121;
+}
+
+.pagination > li > a {
+    border-color: #bdbdbd !important;
+}
+
+.pagination > li > a,
+.pagination > li > span,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover {
+    background-color: #212121;
+    color: #bdbdbd;
+}
+
+.pagination > li > a:hover,
+.pagination > li > a:focus,
+.pagination > li > span:hover,
+.pagination > li > span:focus {
+    background-color: #212121;
+}
+
+.modal-content {
+    background-color: #333333;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: #424242;
+}
+
+.breadcrumb {
+    background-color: #212121;
+    border-color: transparent !important;
+}
+
+.panel-success,
+.alert-success {
+    background-color: #388E3C;
+    color: #eeeeee;
+    border-color: #1B5E20;
+}
+
+.panel-warning,
+.alert-warning {
+    background-color: #F57C00;
+    color: #eeeeee;
+    border-color: #E65100
+}
+
+.panel-danger,
+.alert-danger {
+    background-color: #D32F2F;
+    color: #eeeeee;
+    border-color: #B71C1C;
+}
+
+.panel-info,
+.alert-info {
+    background-color: #0288D1;
+    color: #eeeeee;
+    border-color: #01579B;
+}
+
+.pager {
+  padding-left: 0;
+  margin: 21px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.pager li {
+  display: inline;
+}
+
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #212121;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #bdbdbd;
+}
+
+.pager li > a:hover,
+.pager li > a:focus {
+  text-decoration: none;
+  background-color: #333333;
+  border-color: #212121;
+}
+
+.pager .next > a,
+.pager .next > span {
+  float: right;
+}
+
+.pager .previous > a,
+.pager .previous > span {
+  float: left;
+}
+
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  color: #212121;
+  background-color: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.panel {
+    background-color: transparent;
+}
+
+.label-success,
+.label-yellow,
+.label-danger,
+.label-info {
+    color: #212121;
+}
+
+li > .friend-icon > a.thumbnail {
+    background-color: #212121;
+    border-color: #121212;
+}
+
+.trophy {
+    background-color: #212121;
+    border-color: transparent;
+}
+
+.trophy > div {
+    background-color: #323232 !important;
+    color: #eeeeee !important;
+}
+
+.map-container > .thumbnail {
+    background-color: #212121 !important;
+    border-color: transparent;
+}

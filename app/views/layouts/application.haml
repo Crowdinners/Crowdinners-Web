@@ -1,0 +1,52 @@
+!!!
+%html{:lang => "en"}
+    %head
+        = csrf_meta_tag
+        %meta{:charset => "utf-8"}
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+        %meta{:name => "theme-color", :content => "#337AB7"}
+        %meta{:property => "og:title", :content => "Crowdinners - Translators"}
+        %meta{:property => "og:type", :content => "website"}
+        %meta{:property => "og:url", :content => "https://crowdinners.com"}
+        %meta{:property => "og:image", :content => "https://crowdinners.com/assets/logo_single.png"}
+        %title
+            - if content_for? :title
+                #{yield :title} - #{ORG::NAME}
+            - elsif content_for? :ftitle
+                #{yield :ftitle} - #{ORG::NAME} Forum
+            - else
+                #{ORG::NAME}
+        - if content_for? :noindex
+            %meta{:name => "robots", :content => "noindex"}
+        = stylesheet_link_tag "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css", "application", "//fonts.googleapis.com/css?family=Noto+Sans:700,400,300", "//use.fontawesome.com/releases/v5.8.2/css/all.css"
+        - if user_signed_in? && current_user.dark_theme?
+            = stylesheet_link_tag "themes/regular/dark-theme"
+        - if user_signed_in? && current_user.flatly_theme?
+            = stylesheet_link_tag "themes/premium/flatly", "themes/premium/flatly_addon"
+        - if user_signed_in? && current_user.dyslexia_assist?
+            = stylesheet_link_tag "dyslexia-assist"
+        - if user_signed_in? && current_user.beta_participant?
+            = stylesheet_link_tag "beta"
+        = javascript_include_tag "libraries", "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js", "application"
+        = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.0/bootstrap3-typeahead.min.js"
+        = favicon_link_tag "favicon.ico"
+        - if current_page?(main_app.shop_path)
+            = javascript_include_tag "https://js.braintreegateway.com/v2/braintree.js"
+        - if current_page?(main_app.live_path)
+            = javascript_include_tag "//player.twitch.tv/js/embed/v1.js"
+        = render :partial => "analytics"
+        - if user_signed_in? && @timezone.nil?
+            = render :partial => "timezone"
+        - if content_for? :head
+            = yield :head
+    %body
+        = render :partial => "peek/bar"
+        = render :partial => "nav"
+        -# Content for :splash is outside the container i.e. full width of the browser
+        = yield :splash if content_for?(:splash)
+        .container
+            = render :partial => "errors"
+            = if content_for?(:content) then yield :content else yield end
+            %hr
+            = render :partial => "contact"
+            = render :partial => "footer"

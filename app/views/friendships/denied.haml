@@ -1,0 +1,44 @@
+- content_for :title do "Friendships" end
+
+%section
+    .page-header
+        %h2 Friendships
+    .row
+        .col-md-12
+            %ul.nav.nav-tabs
+                %li{:class => @all ? "active" : ""}
+                    %a.strong{:href => friendships_path}
+                        %i.fa.fa-users
+                        All Friends
+                %li.pull-right{:class => @denials ? "active" : ""}
+                    %a.strong{:href => denied_friendships_path}
+                        %i.fa.fa-user-times
+                        Denied Requests
+                %li.pull-right{:class => @pending ? "active" : ""}
+                    %a.strong{:href => pending_friendships_path}
+                        %i.fa.fa-user-plus
+                        Pending Requests
+            .tab-content
+                .tab-pane#denials{:class => @denials ? "active" : ""}
+                    .table-container
+                        %table.table.table-bordered.table-striped
+                            %thead
+                                %tr
+                                    %th{:width => "40%"} Friend
+                                    %th{:width => "30%"} Action
+                                    %th{:width => "30%"} Denied At
+                            %tbody
+                                - if @denials == nil || @denials.count == 0
+                                    %p.strong.center You have no denied requests!
+                                - else
+                                    - @denials.each_with_index do |friend, i|
+                                        %tr
+                                            %td
+                                                = avatar_for(friend.friender, 16, glow: true)
+                                                %a{:href => user_path(friend.friender), :style => 'color: ' + html_color(friend.friender)}= friend.friender
+                                                to you
+                                            %td
+                                                %a.btn.btn-warning.btn-xs{:href => friendship_path(friend, :decision => true), :data => {:method => :put}} Accept
+                                            %td{:rel => 'tooltip', :title => format_time(friend.decision_date), :data => {:placement => 'left', :container => 'body'}}
+                                                = time_ago_in_words(friend.decision_date, false, :vague => true) + " ago"
+                            = paginate @denials unless @denials == nil

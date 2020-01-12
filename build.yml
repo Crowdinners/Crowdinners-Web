@@ -1,0 +1,17 @@
+timeout: 30m
+steps:
+  - name: gcr.io/cloud-builders/git
+    args:
+      - clone
+      - --depth=1
+      - https://github.com/Electroid/infrastructure.git
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --tag=gcr.io/$PROJECT_ID/web:$BRANCH_NAME
+      - --cache-from=gcr.io/$PROJECT_ID/web:$BRANCH_NAME
+      - --build-arg=BRANCH=$BRANCH_NAME
+      - --build-arg=AUTH=$_AUTH
+      - infrastructure/models/web
+images:
+  - gcr.io/$PROJECT_ID/web:$BRANCH_NAME

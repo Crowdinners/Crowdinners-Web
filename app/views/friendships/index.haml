@@ -1,0 +1,42 @@
+- content_for :title do "Friendships" end
+
+%section
+    .page-header
+        %h2 Friendships
+    .row
+        .col-md-12
+            %ul.nav.nav-tabs
+                %li{:class => @online_friends ? "active" : ""}
+                    %a.strong{:href => friendships_path}
+                        %i.fa.fa-users
+                        All Friends
+                %li.pull-right{:class => @denied ? "active" : ""}
+                    %a.strong{:href => denied_friendships_path}
+                        %i.fa.fa-user-times
+                        Denied Requests
+                %li.pull-right{:class => @pending ? "active" : ""}
+                    %a.strong{:href => pending_friendships_path}
+                        %i.fa.fa-user-plus
+                        Pending Requests
+    %section
+        .row
+            .col-md-12
+                %h4.strong Online Friends
+                %ul.thumbnails.list-unstyled.clearfix
+                    - @online_friends.each do |obj|
+                        %li.friendship.col-md-2.col-sm-3.col-xs-6{:rel => "tooltip", :title => obj[:friend].username}
+                            .friend-icon
+                                %a.label.label-info= "#{obj[:server].name} (#{obj[:datacenter]})"
+                                %a.remove-friend{:href => friendship_path(obj[:friend]), :data => {:method => :delete, :confirm => "Are you sure you want to unfriend " + obj[:friend].username + "?"}}
+                                    %i.fa.fa-times-circle
+                                %a.thumbnail{:href => user_path(obj[:friend])}
+                                    = avatar_for(obj[:friend], 128)
+                %h4.strong Offline Friends
+                %ul.thumbnails.list-unstyled.clearfix
+                    - @offline_friends.each do |friend|
+                        %li.friendship.col-md-1.col-sm-2.col-xs-3{:rel => "tooltip", :title => friend.username}
+                            .friend-icon
+                                %a.remove-friend{:href => friendship_path(friend), :data => {:method => :delete, :confirm => "Are you sure you want to unfriend " + friend.username + "?"}}
+                                    %i.fa.fa-times-circle
+                                %a.thumbnail{:href => user_path(friend)}
+                                    = avatar_for(friend, 48)
