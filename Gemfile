@@ -57,17 +57,17 @@ gem 'geoip'                             # IP lookup utility
 gem 'droplet_kit'                       # Digital Ocean client
 gem 'lockup'                            # Password protect development/staging websites
 gem 'net-http-pipeline'
-gem 'crowdin-api', github: 'OvercastNetwork/crowdin-api', branch: 'master'
+gem 'crowdin-api', github: 'Crowdinners/Crowdin-API', branch: 'master'
 
 gem 'kubeclient'
 gem 'celluloid'
 gem 'celluloid-io'
 
 # CouchDB ORM - forked to fix date serialization format
-gem 'couch_potato', :github => 'OvercastNetwork/couch_potato', :branch => 'master', :ref => '7c55e77cf25f30a0878b7d0425fc3b87e83e33b2'
+gem 'couch_potato', :github => 'Crowdinners/Couch-Potato', :branch => 'master'
 
-gem 'reverse_markdown', :github => 'OvercastNetwork/reverse_markdown', :branch => 'master'
-gem 'ruby-string-match-scorer', :github => 'bjeanes/ruby-string-match-scorer'
+gem 'reverse_markdown', :github => 'Crowdinners/Reverse-Markdown', :branch => 'master'
+gem 'ruby-string-match-scorer', :github => 'Crowdinners/Ruby-String-Match-Scorer'
 
 group :production, :staging do
     gem 'unicorn'                       # Web server
@@ -80,11 +80,11 @@ group :production, :staging do
 end
 
 group :development do
-    gem 'eventmachine', :github => 'eventmachine/eventmachine' # Thin depend, need latest for Windows
+    gem 'eventmachine', :github => 'Crowdinners/EventMachine' # Thin depend, need latest for Windows
     gem 'thin'                          # Web server
     gem 'better_errors'
     gem 'binding_of_caller'
-    gem 'print_members', :github => 'jedediah/print_members' # IRB reflection tool
+    gem 'print_members', :github => 'Crowdinners/Print-Members' # IRB reflection tool
 end
 
 group :test do

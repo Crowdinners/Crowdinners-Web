@@ -1,7 +1,6 @@
 GIT
-  remote: git://github.com/OvercastNetwork/couch_potato.git
-  revision: 7c55e77cf25f30a0878b7d0425fc3b87e83e33b2
-  ref: 7c55e77cf25f30a0878b7d0425fc3b87e83e33b2
+  remote: git://github.com/Crowdinners/Couch-Potato.git
+  revision: 7b261c8d0dac2e2946b42fbaa5fc7e12317ddd56
   branch: master
   specs:
     couch_potato (1.4.0)
@@ -10,38 +9,38 @@ GIT
       json (~> 1.6)
 
 GIT
-  remote: git://github.com/OvercastNetwork/crowdin-api.git
-  revision: 43cceb533afed61f61349a87f43b33ba0ca526cc
+  remote: git://github.com/Crowdinners/Crowdin-API.git
+  revision: 95e39dc79c34ce721da5ab038c80d51fdb61cc1f
   branch: master
   specs:
     crowdin-api (0.4.1)
       rest-client (~> 1.8)
 
 GIT
-  remote: git://github.com/OvercastNetwork/reverse_markdown.git
-  revision: e8c2b752c8ff0f32cb7454600d2d79c2c80c8650
+  remote: git://github.com/Crowdinners/EventMachine.git
+  revision: d230226b356ba650c1c39933ee5c7eccea6706ed
+  specs:
+    eventmachine (1.3.0.dev.1)
+
+GIT
+  remote: git://github.com/Crowdinners/Print-Members.git
+  revision: 7a53cf456e62c7d4f3742dadb7fbdf4d1718d041
+  specs:
+    print_members (0.3.5)
+
+GIT
+  remote: git://github.com/Crowdinners/Reverse-Markdown.git
+  revision: 9558c5bcce077f8025638296fe5760a533a3cb4e
   branch: master
   specs:
     reverse_markdown (0.5.1)
       nokogiri
 
 GIT
-  remote: git://github.com/bjeanes/ruby-string-match-scorer.git
-  revision: a4549e99991ef7159223e7c417affb5c89ef6ff6
+  remote: git://github.com/Crowdinners/Ruby-String-Match-Scorer.git
+  revision: 833eea6d85a5c1731bba2b515e2fad1d8ecaa29e
   specs:
     ruby-string-match-scorer (0.1.0)
-
-GIT
-  remote: git://github.com/eventmachine/eventmachine.git
-  revision: 4de7d0e00fe87819840ba7c7c91e7ed09b85467c
-  specs:
-    eventmachine (1.0.4)
-
-GIT
-  remote: git://github.com/jedediah/print_members.git
-  revision: d70e7bdac745f44de39510b134800c0c8c692142
-  specs:
-    print_members (0.3.4)
 
 GEM
   remote: http://rubygems.org/
