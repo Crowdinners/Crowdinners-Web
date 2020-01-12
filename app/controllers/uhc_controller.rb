@@ -34,7 +34,7 @@ class UhcController < ApplicationController
                         "&location=crowdinners.com" +
                         "&sf=true&output=xml"
 
-            text = "A #{summary} is happening in #{time_ago_in_words(event_start_time)} on stratus.network! @StratusMC #minecraft"
+            text = "A #{summary} is happening in #{time_ago_in_words(event_start_time)} on Crowdinners!"
             tweet_link = "http://twitter.com/home?status=" + CGI.escape(text)
 
             @events[k] = Event.new(
