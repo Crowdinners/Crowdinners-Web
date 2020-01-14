@@ -380,7 +380,7 @@
                                         = render :partial => 'common/chats', :locals => {:chats => @chats, :sender => false, :server => true}
                                     - else
                                         %center
-                                            %p No recent chats to display.
+                                            %p.strong No recent chats to display.
                     - if @alts_final || current_user_safe.has_permission?("misc", "name_change", "index", "all") || current_user_safe.has_permission?("misc", "name_change", "index", "own") && @same_user
                         .tab-pane#alts
                             .row
