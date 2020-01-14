@@ -48,9 +48,10 @@
                 %ul.nav.nav-pills.nav-stacked.follow-us
                     %li.heading
                         Get Involved
-                        %a{:href => main_app.discord_path, :target => "_blank"}
-                            %i.fab.fa-discord
-                            Discord
+                        - if user_signed_in?
+                            %a{:href => ENV['DISCORD_INVITE'], :target => "_blank"}
+                                %i.fab.fa-discord
+                                Discord
                         %a{href: "https://github.com/Crowdinners", :target => "_blank"}
                             %i.fab.fa-github
                             Github
