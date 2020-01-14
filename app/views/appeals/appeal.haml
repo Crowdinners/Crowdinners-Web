@@ -30,8 +30,8 @@
                 %a.btn.btn-lg.btn-primary.strong{:href => (!@can_appeal ? "#" : new_appeal_path), :class => (@punishments == 0 ? "disabled" : "")} Ok, let's go &raquo;
             - else
                 %br
-                %a.btn.btn-lg.btn-inverse{:href => new_user_registration_path} Register
+                -# %a.btn.btn-lg.btn-inverse{:href => new_user_registration_path} Register
                 %a.btn.btn-lg.btn-primary{:href => new_user_session_path} Login
                 %br
                 %br
-                %p Please login if you have an account. If not, registration is quick and painless.
+                %p Please login if you have an account.
