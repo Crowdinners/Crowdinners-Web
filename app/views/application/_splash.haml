@@ -17,9 +17,12 @@
         %ul.bs-docs-social-buttons
             %li
                 %h5{:style => "font-weight: bold"} Latest Announcements:
-                - @topics.each do |topic|
-                    %li
-                        %a{:href => forem.topic_path(topic),
-                           :rel => "tooltip",
-                           :title => "Created " + time_ago_in_words(topic.created_at, false, :vague => true) + " ago",
-                           :data => {:placement => "bottom"}}= render_topic_title(topic, emoji_size: 16)
+                - if user_signed_in?
+                    - @topics.each do |topic|
+                        %li
+                            %a{:href => forem.topic_path(topic),
+                               :rel => "tooltip",
+                               :title => "Created " + time_ago_in_words(topic.created_at, false, :vague => true) + " ago",
+                               :data => {:placement => "bottom"}}= render_topic_title(topic, emoji_size: 16)
+                - else
+                    You must sign in to see the latest announcements!
