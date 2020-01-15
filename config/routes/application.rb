@@ -22,14 +22,6 @@ PGM::Application.routes.draw do
     get '/model_search', :to => 'application#model_search', :as => 'model_search'
     put '/set_time_zone', :to => 'application#set_time_zone'
     get '/load_models', :to => 'application#load_models'
-
-    get '/apply' => redirect('https://stratus.network/forums/59ac44fba2e3a9000100004c')
-    get '/avatars' => redirect('https://stratus.network/forums/posts/5a2ec1be9855c0000100007e')
-    get '/emoji' => redirect('https://stratus.network/forums/posts/5a7f78de7b10af00010002f9')
-    get '/mapmaking' => redirect('https://stratus.network/forums/58e16d72f6e8a83410000047')
-    get '/conduct' => redirect('https://stratus.network/forums/topics/59b70619a2e3a9000100010f')
-    get '/halloween' => redirect('https://stratus.network/forums/topics/5bb0c0e15478350001001749')
-    get '/apply' => redirect("https://stratus.network/forums/59ac44fba2e3a9000100004c")
     #- get '/discord' => redirect(ENV['DISCORD_INVITE'])
 
     resources :revisions
