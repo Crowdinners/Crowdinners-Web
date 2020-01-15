@@ -13,9 +13,8 @@ PGM::Application.routes.draw do
     get '/terms', :to => 'application#terms'
     get '/privacy', :to => 'application#privacy'
     get '/refund', :to => 'application#refund'
-    get '/donate', :to => 'application#donate'
     get '/live', :to => 'application#live'
-    get '/donate', :to => 'application#donate'
+    get '/donations', :to => 'application#donations'
 
     post '/inquire', :to => 'application#inquire'
     post '/autocomplete/:name', :to => 'application#autocomplete'

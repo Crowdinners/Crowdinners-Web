@@ -1,3 +1,3 @@
 PGM::Application.routes.draw do
-	get '/shop' => redirect('https://crowdinners.com/donate')
+	get '/shop' => redirect('crowdinners.com/donate')
 end
