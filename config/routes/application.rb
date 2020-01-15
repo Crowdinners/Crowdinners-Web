@@ -15,6 +15,7 @@ PGM::Application.routes.draw do
     get '/refund', :to => 'application#refund'
     get '/donate', :to => 'application#donate'
     get '/live', :to => 'application#live'
+    get '/donate', :to => 'application#donate'
 
     post '/inquire', :to => 'application#inquire'
     post '/autocomplete/:name', :to => 'application#autocomplete'
