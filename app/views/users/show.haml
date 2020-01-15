@@ -230,6 +230,12 @@
                                     %blockquote
                                         %p{:style => "color: #666"}
                                             = @player.discord
+                            - if !@player.crowdin.to_s.empty?
+                                .col-md3.col-sm-6
+                                    %h5.strong Crowdin
+                                    %blockquote
+                                        %p
+                                            %a{:href => "https://crowdin.com/profile/#{@player.crowdin}", :target => "_blank"}= @player.crowdin
                             - if team = @player.team
                                 .col-md-3.col-sm-6
                                     %h5.strong Team

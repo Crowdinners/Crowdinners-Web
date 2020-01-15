@@ -24,6 +24,10 @@
                         %a{:href => '#profile', :data => {:toggle => 'pill'}}
                             %i.fa.fa-edit
                             Profile Customization
+                    %li
+                        %a{:href => '#crowdin', :data => {:toggle => 'pill'}}
+                            %i.fa.fa-bookmark
+                            Crowdin Settings
                     %h4.strong.center Settings
                     %li
                         %a{:href => '#premium_settings', :data => {:toggle => 'pill'}}
@@ -148,6 +152,9 @@
                                 .form-group
                                     = f.label :discord, "Discord"
                                     = f.text_field :discord, :disabled => (@disabled.include? :discord), :class => 'form-control'
+                                .form-group
+                                    = f.label :crowdin, "Crowdin"
+                                    = f.text_field :crowdin, :disabled => (@disabled.include? :crowdin), :class => 'form-control'
                             .col-md-12
                                 .form-group
                                     = f.submit "Update", :class => "btn btn-primary"
