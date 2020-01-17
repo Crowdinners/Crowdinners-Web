@@ -41,7 +41,8 @@
                                 %td
                                     = ((@page - 1) * 20) + (i + 1)
                                 %td
-                                    = rev.sha_brief
+                                    %a{:href => @repository.public_url + "/commit/" + rev.sha_brief, :target => "_blank"}
+                                        = rev.sha_brief
                                 %td
                                     - if rev.author
                                         = link_to_user(rev.author)
