@@ -10,7 +10,7 @@ Repository.define do
         visible? true do
             repository :web do
                 title           "Website"
-                description     "Main website and backend repository"
+                description     "Main website and backend."
                 repo            "Crowdinners-Web"
                 open?           true
             end
