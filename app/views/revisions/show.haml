@@ -4,6 +4,9 @@
     .page-header
         %h2
             Revisions
+            %small Commits over at our GitHub organization
+
+
     .row
         .col-md-12
             %ul.nav.nav-tabs
@@ -15,7 +18,7 @@
                     %strong Repository is down
                     Revisions will appear again when the repository comes back online
             - if @repository.open?
-                .alert.alert-info
+                .alert.alert-success
                     %strong This repository is open source
                     You can
                     %a{:href => @repository.public_url} fork it
