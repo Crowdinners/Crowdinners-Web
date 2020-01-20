@@ -14,3 +14,5 @@ tmp
 LocalGemfile
 LocalGemfile.lock
 google.json
+production.sh
+development.sh
