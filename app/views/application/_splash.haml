@@ -16,10 +16,8 @@
     .container
         %ul.bs-docs-social-buttons
             %li
-                %h5{:style => "font-weight: bold"} Latest Announcements:
                 - if @topics.size != 0
-                    %h1 wqdwefewfwerqw
-                - else 
+                    %h5{:style => "font-weight: bold"} Latest Announcements:
                     - @topics.each do |topic|
                         %li
                             %a{:href => forem.topic_path(topic),
