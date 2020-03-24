@@ -15,6 +15,6 @@ IGNORED_NETS = %w(
     46.151.208.0/23
     186.19.62.19/32
     173.246.32.0/19
-).collect do |ip|
-    NetAddr::CIDR.create(ip)
-end
+).collect
+
+NetAddr.summ_IPv4Net(IGNORED_NETS)
