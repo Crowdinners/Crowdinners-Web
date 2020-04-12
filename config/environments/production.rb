@@ -65,6 +65,8 @@ PGM::Application.configure do
     config.action_mailer.default_url_options = { :host => ENV['DEVISE_HOST'] || ORG::DOMAIN }
     config.action_mailer.perform_deliveries = true
     config.action_mailer.delivery_method = :smtp
+
+    Haml::TempleEngine.disable_option_validator!
     
     if ENV['MAIL_USERNAME'] != nil
         config.action_mailer.smtp_settings = {
