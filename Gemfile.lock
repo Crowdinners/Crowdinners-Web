@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/Crowdinners/Couch-Potato.git
+  remote: https://github.com/Crowdinners/Couch-Potato.git
   revision: 7b261c8d0dac2e2946b42fbaa5fc7e12317ddd56
   branch: master
   specs:
@@ -9,7 +9,7 @@ GIT
       json (~> 1.6)
 
 GIT
-  remote: git://github.com/Crowdinners/Crowdin-API.git
+  remote: https://github.com/Crowdinners/Crowdin-API.git
   revision: 95e39dc79c34ce721da5ab038c80d51fdb61cc1f
   branch: master
   specs:
@@ -17,19 +17,19 @@ GIT
       rest-client (~> 1.8)
 
 GIT
-  remote: git://github.com/Crowdinners/EventMachine.git
+  remote: https://github.com/Crowdinners/EventMachine.git
   revision: d230226b356ba650c1c39933ee5c7eccea6706ed
   specs:
     eventmachine (1.3.0.dev.1)
 
 GIT
-  remote: git://github.com/Crowdinners/Print-Members.git
+  remote: https://github.com/Crowdinners/Print-Members.git
   revision: 7a53cf456e62c7d4f3742dadb7fbdf4d1718d041
   specs:
     print_members (0.3.5)
 
 GIT
-  remote: git://github.com/Crowdinners/Reverse-Markdown.git
+  remote: https://github.com/Crowdinners/Reverse-Markdown.git
   revision: 9558c5bcce077f8025638296fe5760a533a3cb4e
   branch: master
   specs:
@@ -37,7 +37,7 @@ GIT
       nokogiri
 
 GIT
-  remote: git://github.com/Crowdinners/Ruby-String-Match-Scorer.git
+  remote: https://github.com/Crowdinners/Ruby-String-Match-Scorer.git
   revision: 833eea6d85a5c1731bba2b515e2fad1d8ecaa29e
   specs:
     ruby-string-match-scorer (0.1.0)
@@ -186,7 +186,8 @@ GEM
     ffi (1.12.2-x64-mingw32)
     gemoji (2.1.0)
     geoip (1.6.2)
-    git (1.2.8)
+    git (1.11.0)
+      rchardet (~> 1.8)
     github_api (0.18.2)
       addressable (~> 2.4)
       descendants_tracker (~> 0.0.4)
@@ -356,6 +357,7 @@ GEM
     rake (13.0.1)
     rblineprof (0.3.6)
       debugger-ruby_core_source (~> 1.3)
+    rchardet (1.8.0)
     recursive-open-struct (1.0.5)
     redcarpet (3.2.2)
     redis (3.2.0)
